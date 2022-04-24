@@ -84,7 +84,7 @@ console.log(`✔️  Toolabs JSON Theme Digested successfully`)
 console.log(`〰️ Writting Toolabs JSON Theme for stitches...`)
 
 fs.writeFile(
-  `./app/styles/${file_name}.json`,
+  `./app/styles/${file_name}-theme.json`,
   JSON.stringify(new_theme),
   (err) => {
     if (err) {
