@@ -1,6 +1,6 @@
 const fs = require('fs')
 const [file_name] = process.argv.slice(2)
-const theme = require(`./${file_name}.json`)
+const theme = require(`./${file_name ?? 'default'}-theme.json`)
 
 const new_theme = {
   name: theme.name,
@@ -94,6 +94,8 @@ fs.writeFile(
       )
     }
 
-    console.log(`✔️  Stitches file for ${file_name} created successfully 🎉`)
+    console.log(
+      `✔️  Stitches file for ${file_name} theme created successfully 🎉`,
+    )
   },
 )
