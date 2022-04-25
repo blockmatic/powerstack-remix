@@ -19,10 +19,12 @@ export function Header() {
     backdropFilter: 'saturate(180%) blur(5px)',
     boxShadow: 'inset 0 -1px 0 0 rgba(0,0,0,.1)',
     bg: '$header-bg',
+    // position: 'sticky', maybe?
     position: 'absolute',
     py: '$x-small',
     top: 0,
     width: '100%',
+    zIndex: 1000,
   })
 
   const LinkItem = styled(Link, linkStyles)
@@ -50,7 +52,7 @@ export function Header() {
 
   return (
     <NavBar>
-      <Container>
+      <Container css={{ px: '$xx-small', '@tabletUp': { px: '$small' } }}>
         <Flex justify="between" align="center">
           {/* ToDo: Logo needs to be improved */}
           <Flex css={{ 'svg': { height: '32px', width: 'max-content' } }}>
