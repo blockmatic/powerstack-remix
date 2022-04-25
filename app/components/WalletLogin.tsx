@@ -1,15 +1,23 @@
-import { styled } from '@stitches/react'
+import { styled } from '~/styles/stitches.config'
 import { useStore } from '~/store'
 import _ from 'lodash'
 import { ethers } from 'ethers'
 import { useFetcher, useLocation } from '@remix-run/react'
 import { ethereum, isPhantom, solana } from '~/library'
 
-const StyledWallet = styled('div', {
-  border: '1px dotted gray',
-  minHeight: 100,
+const Container = styled('div', {
+  minHeight: '100vh',
+  pt: '4.5rem',
+  px: '$regular',
+  maxWidth: '25rem',
+  mx: 'auto',
+  mb: '$regular',
+  mt: 0,
 })
 
+const TitleStyles = styled('h1', {
+  textAlign: 'center',
+})
 const message = 'Login to PowerStack Remix'
 
 type LoginOptions = {
@@ -76,26 +84,24 @@ export const WalletLogin = () => {
   }
 
   return (
-    <StyledWallet>
-      {/* {console.log('Wat chain', appconfig.network.chain)}
-      <p>Network: {appconfig.network.chain}</p> */}
-      <h3>Rinkeby</h3>
+    <Container>
+      <TitleStyles>Welcome {user ? 'Back' : null} to PoweStack Remix</TitleStyles>
+      {/* <h3>Rinkeby</h3> */}
       <button onClick={loginWithMetamask}>Login with Metamask</button>
-      <p>
+      {/* <p>
         Address:{' '}
         {user?.address && user?.network === 'rinkeby'
           ? user.address
           : 'wallet not connected'}
-      </p>
-      {}
-      <h3>Solana</h3>
+      </p> */}
+      {/* <h3>Solana</h3> */}
       <button onClick={loginWithPhantom}>Login with Phantom</button>
-      <p>
+      {/* <p>
         Address:{' '}
         {user?.address && user?.network === 'solana'
           ? user.address
           : 'wallet not connected'}
-      </p>
-    </StyledWallet>
+      </p> */}
+    </Container>
   )
 }

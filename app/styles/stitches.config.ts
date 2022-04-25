@@ -25,7 +25,7 @@ export const { styled, globalCss, getCssText, config }  = createStitches({
     sizes: {
       container: '78.5rem',
       iconSmall: '1.375rem',
-      iconMedium: '2.75rem'
+      iconMedium: '2.75rem',
     },
     fontWeights: {
       body: 400,
