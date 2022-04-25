@@ -1,6 +1,4 @@
-import * as React from 'react'
-
-const BlockmaticIcon: React.FC = (props) => (
+const BlockmaticIcon = (props:any) => (
   <svg
     width="426"
     height="84"

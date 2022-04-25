@@ -130,6 +130,7 @@ export const globalStyles = globalCss({
     '-webkit-font-smoothing': 'antialiased',
     '-moz-osx-font-smoothing': 'grayscale',
     scrollBehavior: 'smooth',
+    letterSpacing: '0.02em',
   },
   '::-webkit-scrollbar': {
     width: '13px',

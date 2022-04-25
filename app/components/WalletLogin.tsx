@@ -16,6 +16,7 @@ const Card = styled(Flex, {
   borderRadius: '4px',
   px: '$small',
   py: '$large',
+  transition: 'all 160ms ease-in-out',
   boxShadow: '0px 4px 8px 0px #00000014, 2px 2px 2px 0px #0000000a',
   '> button, > hr': {
     width: '100%',
@@ -27,6 +28,9 @@ const Card = styled(Flex, {
     border: 'none',
     mt: '$xx-small',
     mb: '$regular',
+  },
+  '&:hover': {
+    boxShadow: '0px 8px 16px 0px #00000014, 4px 4px 4px 0px #0000000a',
   },
   '@tabletUp': {
     px: '$large'

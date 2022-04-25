@@ -3,6 +3,7 @@ import { WalletLogin } from '~/components/WalletLogin'
 import { Header } from '~/components/Header'
 import { styled } from '~/styles/stitches.config'
 import { Container } from '~/components/Container'
+import { Footer } from '~/components/Footer'
 
 const MainContent = styled(Container, {
   minHeight: 'calc(100vh - 120px)',
@@ -17,11 +18,7 @@ export default function Index() {
         <WalletLogin />
       </MainContent>
 
-      <ul>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-      </ul>
+      <Footer />
     </div>
   )
 }

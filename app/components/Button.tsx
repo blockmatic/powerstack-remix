@@ -29,6 +29,7 @@ export const Button = styled('button', {
   transition: 'all 240ms ease-in-out',
 
   'svg': {
+    transition: 'all 240ms ease-in-out',
     width: '24px',
     height: '24px',
     marginRight: '$xxx-small',
@@ -100,6 +101,13 @@ export const Button = styled('button', {
         '&:hover:not(:disabled)': {
           backgroundColor: '$neutral-800'
         }
+      },
+      transparent: {
+        width: 'max-content',
+        height: 'max-content',
+        backgroundColor: 'none',
+        boxShadow: 'none',
+        'svg': { m: 0}
       },
     },
   },
