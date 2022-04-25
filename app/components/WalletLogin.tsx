@@ -5,21 +5,38 @@ import { ethers } from 'ethers'
 import { useFetcher, useLocation } from '@remix-run/react'
 import { ethereum, isPhantom, solana } from '~/library'
 import { Button } from '~/components/Button'
-import { MetamaskIcon } from '~/components/icons'
+import { AnchorIcon, MetamaskIcon, PhantonIcon, GitlabIcon, GhLoginIcon, BitbucketIcon } from '~/components/icons'
+import { Flex } from '~/components/Flex'
 
-const Container = styled('div', {
-  minHeight: '100vh',
-  pt: '4.5rem',
-  px: '$regular',
+// TODO: This should be a card
+const Card = styled(Flex, {
   maxWidth: '350px',
+  my: '$x-large',
   mx: 'auto',
-  mb: '$regular',
-  mt: 0,
+  borderRadius: '4px',
+  px: '$small',
+  py: '$large',
+  boxShadow: '0px 4px 8px 0px #00000014, 2px 2px 2px 0px #0000000a',
+  '> button, > hr': {
+    width: '100%',
+    mb: '$small'
+  },
+  '> hr': {
+    height: 1,
+    backgroundColor: '$neutral',
+    border: 'none',
+    mt: '$xx-small',
+    mb: '$regular',
+  },
+  '@tabletUp': {
+    px: '$large'
+  }
 })
 
 const TitleStyles = styled('h1', {
   textAlign: 'center',
   fontFamily: '$extra-bold',
+  mb: '$regular',
 })
 const message = 'Login to PowerStack Remix'
 
@@ -87,9 +104,13 @@ export const WalletLogin = () => {
   }
 
   return (
-    <Container>
-      <TitleStyles>Welcome {user ? 'Back' : null} to PoweStack Remix</TitleStyles>
-      {/* <h3>Rinkeby</h3> */}
+    <Card direction="column">
+      <TitleStyles css={{ fontSize: '$h-2' }}>Welcome {user ? 'Back' : null} to PoweStack Remix</TitleStyles>
+      {/* <TitleStyles as="h2" css={{ fontSize: '$h-4' }}>Rinkeby</TitleStyles> */}
+      <Button onClick={loginWithPhantom} variant="phantom">
+        <PhantonIcon />
+        Login with Phantom
+      </Button>
       <Button onClick={loginWithMetamask} variant="metamask">
         <MetamaskIcon />
         Login with Metamask
@@ -100,14 +121,32 @@ export const WalletLogin = () => {
           ? user.address
           : 'wallet not connected'}
       </p> */}
-      {/* <h3>Solana</h3> */}
-      <Button onClick={loginWithPhantom}>Login with Phantom</Button>
       {/* <p>
         Address:{' '}
         {user?.address && user?.network === 'solana'
           ? user.address
           : 'wallet not connected'}
       </p> */}
-    </Container>
+      <Button onClick={() => console.log('I\'m dummy, gimme power!')} variant="anchor">
+        <AnchorIcon />
+        Login with Anchor
+      </Button>
+
+      <hr />
+
+      <Button onClick={() => console.log('I\'m dummy, gimme power!')} variant="oAuth">
+        <GhLoginIcon />
+        Login with Github
+      </Button>
+      <Button onClick={() => console.log('I\'m dummy, gimme power!')} variant="oAuth">
+        <GitlabIcon />
+        Login with Gitlab
+      </Button>
+      <Button onClick={() => console.log('I\'m dummy, gimme power!')} variant="oAuth">
+        <BitbucketIcon />
+        Login with BitBucket
+      </Button>
+
+    </Card>
   )
 }

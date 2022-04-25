@@ -19,8 +19,7 @@ export function Header() {
     backdropFilter: 'saturate(180%) blur(5px)',
     boxShadow: 'inset 0 -1px 0 0 rgba(0,0,0,.1)',
     bg: '$header-bg',
-    // position: 'sticky', maybe?
-    position: 'absolute',
+    position: 'sticky',
     py: '$x-small',
     top: 0,
     width: '100%',

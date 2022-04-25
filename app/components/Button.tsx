@@ -7,8 +7,10 @@ export const Button = styled('button', {
   cursor: 'pointer',
   display: 'inline-flex',
   alignItems: 'center',
+  justifyContent: 'center',
   boxSizing: 'border-box',
   userSelect: 'none',
+  boxShadow: '0px 4px 8px 0px #00000014, 2px 2px 2px 0px #0000000a',
   '&::before': {
     boxSizing: 'border-box',
   },
@@ -37,6 +39,9 @@ export const Button = styled('button', {
     color: '$neutral-700',
     backgroundColor: '$neutral-300', 
     cursor: 'not-allowed',
+  },
+  '&:hover:not(:disabled)': {
+    boxShadow: '0px 8px 16px 0px #00000014, 4px 4px 4px 0px #0000000a',
   },
 
   variants: {
@@ -67,39 +72,18 @@ export const Button = styled('button', {
           backgroundColor: '$neutral-700'
         }
       },
-      github: {
-        backgroundColor: '$neutral-800',
-        color: '#FFF',
-        '&:hover:not(:disabled)': {
-          backgroundColor: '$neutral-700'
-        }
-      },
-      gitlab: {
-        backgroundColor: '$primary-400',
-        color: '#FFF',
-        '&:hover:not(:disabled)': {
-          backgroundColor: '$neutral-300'
-        }
-      },
-      bitbucket: {
-        backgroundColor: '$primary',
-        color: '#FFF',
-        '&:hover:not(:disabled)': {
-          backgroundColor: '$neutral-400'
-        }
-      },
       metamask: {
-        backgroundColor: '$neutral-700',
+        backgroundColor: '$primary-600',
         color: '#FFF',
         '&:hover:not(:disabled)': {
-          backgroundColor: '$neutral-800'
+          backgroundColor: '$primary-700'
         }
       },
       anchor: {
-        backgroundColor: '$primary-400',
+        backgroundColor: '$primary-700',
         color: '#FFF',
         '&:hover:not(:disabled)': {
-          backgroundColor: '$primary'
+          backgroundColor: '$primary-800'
         }
       },
       phantom: {
@@ -107,6 +91,14 @@ export const Button = styled('button', {
         color: '#FFF',
         '&:hover:not(:disabled)': {
           backgroundColor: '$primary-600'
+        }
+      },
+      oAuth: {
+        backgroundColor: '$neutral-700',
+        color: '#FFF',
+        'path': { fill: '#FFF' },
+        '&:hover:not(:disabled)': {
+          backgroundColor: '$neutral-800'
         }
       },
     },
