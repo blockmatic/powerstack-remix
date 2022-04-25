@@ -36,6 +36,11 @@ export const { styled, globalCss, getCssText, config }  = createStitches({
     fonts: lightTheme.fonts,
     fontSizes: getFontSizes()
   },
+  styles: {
+    h1: {
+      fontFamily: 'Gilroy-ExtraBold',
+    }
+  },
   media: {
     tabletUp: '(min-width: 768px)',
     desktopUp: '(min-width: 1024px)',

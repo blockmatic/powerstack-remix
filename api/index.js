@@ -70,12 +70,12 @@ var name = "light";
 var typeStyles = { "display-1": { fontFamily: "Gilroy-ExtraBold", fontSize: "48px", lineHeight: "62px", letterSpacing: "0.1em" }, "display-2": { fontFamily: "Gilroy-ExtraBold", fontSize: "40px", lineHeight: "52px", letterSpacing: "0.1em" }, "h-1": { fontFamily: "Gilroy-Bold", fontSize: "33px", lineHeight: "44px", letterSpacing: "0.1em" }, "h-2": { fontFamily: "Gilroy-Bold", fontSize: "28px", lineHeight: "38px", letterSpacing: "0.1em" }, "h-3": { fontFamily: "Gilroy-Bold", fontSize: "23px", lineHeight: "32px", letterSpacing: "0.1em" }, "h-4": { fontFamily: "Gilroy-Bold", fontSize: "19px", lineHeight: "27px", letterSpacing: "0.1em" }, "h-5": { fontFamily: "Gilroy-Bold", fontSize: "16px", lineHeight: "23px", letterSpacing: "0.1em" }, body: { fontFamily: "Gilroy-Bold", fontSize: "16px", lineHeight: "23px", letterSpacing: "0.1em" }, small: { fontFamily: "Gilroy-SemiBold", fontSize: "13px", lineHeight: "20px", letterSpacing: "0.1em" }, "x-small": { fontFamily: "Gilroy-SemiBold", fontSize: "11px", lineHeight: "17px", letterSpacing: "0.1em" } };
 var radii = { "radius-4": "4px", "radius-6": "6px", "radius-12": "12px", "radius-20": "20px" };
 var shadows = { "drop-shadow-1": "0px 4px 8px 0px #00000014, 2px 2px 2px 0px #0000000a", "drop-shadow-2": "0px 8px 16px 0px #00000014, 4px 4px 4px 0px #0000000a", "drop-shadow-3": "0px 12px 20px 0px #00000014, 6px 6px 6px 0px #0000000a", "drop-shadow-4": "0px 16px 24px 0px #00000014, 8px 8px 8px 0px #0000000a", "drop-shadow-5": "0px 24px 28px 0px #00000014, 12px 12px 12px 0px #0000000a" };
+var transitions = { instant: "0ms", "x-fast": "107ms", fast: "160ms", normal: "240ms", slow: "360ms", "x-slow": "540ms" };
 var colors = { primary: "#044bff", "shadow-layer-1": "#00000014", "shadow-layer-2": "#0000000a", background: "#ffffff", neutral: "#eaeef0", "neutral-400": "#eef2f3", "neutral-300": "#f2f5f7", "neutral-600": "#b3c1c8", "neutral-700": "#7d94a0", "neutral-200": "#f6f8fa", "neutral-800": "#51646d", text: "#000505", "primary-400": "#1d5dff", "primary-300": "#366fff", "primary-200": "#4f81ff", "primary-600": "#033ccc", "primary-700": "#052e96", "primary-800": "#052062" };
 var fonts = { bold: "Gilroy-Bold", "extra-bold": "Gilroy-ExtraBold", "semi-bold": "Gilroy-SemiBold" };
-var durations = { instant: "0", "x-fast": "107", fast: "160", normal: "240", slow: "360", "x-slow": "540" };
 var easeCurves = { "in-out-quint": { x1: 0.86, y1: 0, x2: 0.07, y2: 1 }, "out-quint": { x1: 0.23, y1: 1, x2: 0.32, y2: 1 }, "in-sine": { x1: 0.47, y1: 0, x2: 0.745, y2: 0.715 } };
 var space = { none: "0px", "xxx-small": "6px", "xx-small": "9px", "x-small": "14px", small: "21px", regular: "32px", large: "48px", "x-large": "72px", "xx-large": "108px", "xxx-large": "162px" };
-var light_theme_default = { name, typeStyles, radii, shadows, colors, fonts, durations, easeCurves, space };
+var light_theme_default = { name, typeStyles, radii, shadows, transitions, colors, fonts, easeCurves, space };
 
 // app/styles/dark-theme.json
 var name2 = "dark";
@@ -84,10 +84,10 @@ var radii2 = { "radius-4": "4px", "radius-6": "6px", "radius-12": "12px", "radiu
 var shadows2 = { "drop-shadow-1": "0px 4px 8px 0px #0000003d, 2px 2px 2px 0px #0000001f", "drop-shadow-2": "0px 8px 16px 0px #0000003d, 4px 4px 4px 0px #00000021", "drop-shadow-3": "0px 12px 20px 0px #0000003d, 6px 6px 6px 0px #0000001f", "drop-shadow-4": "0px 16px 24px 0px #0000003d, 8px 8px 8px 0px #0000001f", "drop-shadow-5": "0px 24px 28px 0px #0000003d, 12px 12px 12px 0px #0000001f" };
 var colors2 = { primary: "#00023e", "shadow-layer-1": "#00000014", "shadow-layer-2": "#0000000a", background: "#002f2f", neutral: "#eaeef0", "neutral-400": "#eef2f3", "neutral-300": "#f2f5f7", "neutral-600": "#b3c1c8", "neutral-700": "#7d94a0", "neutral-200": "#f6f8fa", "neutral-800": "#51646d", text: "#fefefe", "primary-400": "#00036b", "primary-300": "#000598", "primary-200": "#0006c4", "primary-600": "#010231", "primary-700": "#010224", "primary-800": "#010218" };
 var fonts2 = { bold: "Gilroy-Bold", "extra-bold": "Gilroy-ExtraBold", "semi-bold": "Gilroy-SemiBold" };
-var durations2 = { instant: "0", "x-fast": "107", fast: "160", normal: "240", slow: "360", "x-slow": "540" };
+var durations = { instant: "0", "x-fast": "107", fast: "160", normal: "240", slow: "360", "x-slow": "540" };
 var easeCurves2 = { "in-out-quint": { x1: 0.86, y1: 0, x2: 0.07, y2: 1 }, "out-quint": { x1: 0.23, y1: 1, x2: 0.32, y2: 1 }, "in-sine": { x1: 0.47, y1: 0, x2: 0.745, y2: 0.715 } };
 var space2 = { none: "0px", "xxx-small": "6px", "xx-small": "9px", "x-small": "14px", small: "21px", regular: "32px", large: "48px", "x-large": "72px", "xx-large": "108px", "xxx-large": "162px" };
-var dark_theme_default = { name: name2, typeStyles: typeStyles2, radii: radii2, shadows: shadows2, colors: colors2, fonts: fonts2, durations: durations2, easeCurves: easeCurves2, space: space2 };
+var dark_theme_default = { name: name2, typeStyles: typeStyles2, radii: radii2, shadows: shadows2, colors: colors2, fonts: fonts2, durations, easeCurves: easeCurves2, space: space2 };
 
 // app/styles/stitches.config.ts
 console.log("Light Theme for Stitches\n", light_theme_default);
@@ -118,6 +118,11 @@ var { styled, globalCss, getCssText, config } = (0, import_react.createStitches)
     space: light_theme_default.space,
     fonts: light_theme_default.fonts,
     fontSizes: getFontSizes()
+  },
+  styles: {
+    h1: {
+      fontFamily: "Gilroy-ExtraBold"
+    }
   },
   media: {
     tabletUp: "(min-width: 768px)",
@@ -587,6 +592,190 @@ var GhLoginIcon = () => /* @__PURE__ */ React.createElement("svg", {
 }));
 var GhLoginIcon_default = GhLoginIcon;
 
+// app/components/icons/MetamaskIcon.tsx
+var MetamaskIcon = () => /* @__PURE__ */ React.createElement("svg", {
+  width: "34",
+  height: "34",
+  viewBox: "0 0 34 34",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg"
+}, /* @__PURE__ */ React.createElement("path", {
+  d: "M29.2511 3.78845L18.6328 11.6748L20.5964 7.02197L29.2511 3.78845Z",
+  fill: "#E2761B",
+  stroke: "#E2761B",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M4.73828 3.78845L15.2712 11.7495L13.4037 7.02197L4.73828 3.78845Z",
+  fill: "#E4761B",
+  stroke: "#E4761B",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M25.4305 22.0691L22.6025 26.4018L28.6534 28.0666L30.3929 22.1651L25.4305 22.0691Z",
+  fill: "#E4761B",
+  stroke: "#E4761B",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M3.61768 22.1651L5.34649 28.0666L11.3973 26.4018L8.56934 22.0691L3.61768 22.1651Z",
+  fill: "#E4761B",
+  stroke: "#E4761B",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M11.0558 14.7483L9.36963 17.2988L15.3778 17.5656L15.1644 11.1093L11.0558 14.7483Z",
+  fill: "#E4761B",
+  stroke: "#E4761B",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M22.9335 14.7483L18.7715 11.0345L18.6328 17.5656L24.6303 17.2988L22.9335 14.7483Z",
+  fill: "#E4761B",
+  stroke: "#E4761B",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M11.3972 26.4017L15.0042 24.6409L11.8881 22.2078L11.3972 26.4017Z",
+  fill: "#E4761B",
+  stroke: "#E4761B",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M18.9849 24.6409L22.6026 26.4017L22.101 22.2078L18.9849 24.6409Z",
+  fill: "#E4761B",
+  stroke: "#E4761B",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M22.6028 26.4017L18.9851 24.6409L19.2732 26.9993L19.2412 27.9918L22.6028 26.4017Z",
+  fill: "#D7C1B3",
+  stroke: "#D7C1B3",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M11.3975 26.4017L14.759 27.9918L14.7377 26.9993L15.0045 24.6409L11.3975 26.4017Z",
+  fill: "#D7C1B3",
+  stroke: "#D7C1B3",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M11.3973 26.4018L11.9096 22.0691L8.56934 22.1651L11.3973 26.4018Z",
+  fill: "#CD6116",
+  stroke: "#CD6116",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M22.0903 22.0691L22.6026 26.4018L25.4306 22.1651L22.0903 22.0691Z",
+  fill: "#CD6116",
+  stroke: "#CD6116",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M24.6303 17.2988L18.6328 17.5656L19.1877 20.6497L20.0735 18.7929L22.2078 19.764L24.6303 17.2988Z",
+  fill: "#CD6116",
+  stroke: "#CD6116",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M11.8028 19.764L13.9371 18.7929L14.8122 20.6497L15.3778 17.5656L9.36963 17.2988L11.8028 19.764Z",
+  fill: "#CD6116",
+  stroke: "#CD6116",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M14.8124 20.6497L11.803 19.764L13.9266 18.7928L14.8124 20.6497Z",
+  fill: "#233447",
+  stroke: "#233447",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M19.177 20.6497L20.0628 18.7928L22.1971 19.764L19.177 20.6497Z",
+  fill: "#233447",
+  stroke: "#233447",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M9.36963 17.2988L11.8881 22.2078L11.8028 19.764L9.36963 17.2988Z",
+  fill: "#E4751F",
+  stroke: "#E4751F",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M22.2075 19.764L22.1008 22.2078L24.63 17.2988L22.2075 19.764Z",
+  fill: "#E4751F",
+  stroke: "#E4751F",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M15.3779 17.5657L14.8123 20.6498L15.5166 24.2888L15.6767 19.4972L15.3779 17.5657Z",
+  fill: "#E4751F",
+  stroke: "#E4751F",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M18.6326 17.5657L18.3445 19.4866L18.4725 24.2888L19.1875 20.6498L18.6326 17.5657Z",
+  fill: "#E4751F",
+  stroke: "#E4751F",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M19.1877 20.6497L18.4727 24.2887L18.9849 24.6409L22.101 22.2077L22.2077 19.7639L19.1877 20.6497Z",
+  fill: "#F6851B",
+  stroke: "#F6851B",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M11.803 19.7639L11.8884 22.2077L15.0045 24.6409L15.5167 24.2887L14.8124 20.6497L11.803 19.7639Z",
+  fill: "#F6851B",
+  stroke: "#F6851B",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M19.2412 27.9918L19.2732 26.9993L19.0064 26.7646H14.9831L14.7377 26.9993L14.759 27.9918L11.3975 26.4017L12.5713 27.3622L14.9511 29.0163H19.0384L21.4288 27.3622L22.6027 26.4017L19.2412 27.9918Z",
+  fill: "#C0AD9E",
+  stroke: "#C0AD9E",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M18.9849 24.641L18.4726 24.2888H15.5166L15.0043 24.641L14.7375 26.9994L14.983 26.7647H19.0062L19.273 26.9994L18.9849 24.641Z",
+  fill: "#161616",
+  stroke: "#161616",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M29.6992 12.1871L30.6063 7.83302L29.251 3.78845L18.9849 11.408L22.9334 14.7483L28.5147 16.381L29.7526 14.9404L29.219 14.5562L30.0728 13.7772L29.4111 13.2649L30.2648 12.6139L29.6992 12.1871Z",
+  fill: "#763D16",
+  stroke: "#763D16",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M3.39355 7.83302L4.30065 12.1871L3.72438 12.6139L4.57811 13.2649L3.92714 13.7772L4.78087 14.5562L4.24729 14.9404L5.47453 16.381L11.0558 14.7483L15.0044 11.408L4.73819 3.78845L3.39355 7.83302Z",
+  fill: "#763D16",
+  stroke: "#763D16",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M28.5148 16.3811L22.9335 14.7483L24.6303 17.2988L22.1011 22.2078L25.4306 22.1651H30.393L28.5148 16.3811Z",
+  fill: "#F6851B",
+  stroke: "#F6851B",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M11.0558 14.7483L5.47455 16.3811L3.61768 22.1651H8.56934L11.8882 22.2078L9.36972 17.2988L11.0558 14.7483Z",
+  fill: "#F6851B",
+  stroke: "#F6851B",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}), /* @__PURE__ */ React.createElement("path", {
+  d: "M18.6327 17.5656L18.9849 11.408L20.607 7.02197H13.4036L15.0043 11.408L15.3778 17.5656L15.5059 19.5078L15.5166 24.2888H18.4726L18.494 19.5078L18.6327 17.5656Z",
+  fill: "#F6851B",
+  stroke: "#F6851B",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}));
+var MetamaskIcon_default = MetamaskIcon;
+
 // app/components/icons/BlockmaticIcon.tsx
 var React2 = __toESM(require("react"));
 var BlockmaticIcon = (props) => /* @__PURE__ */ React2.createElement("svg", __spreadValues({
@@ -703,17 +892,129 @@ var import_react9 = require("@remix-run/react");
 // app/components/WalletLogin.tsx
 var import_ethers2 = require("ethers");
 var import_react8 = require("@remix-run/react");
+
+// app/components/Button.tsx
+var Button = styled("button", {
+  all: "unset",
+  cursor: "pointer",
+  display: "inline-flex",
+  alignItems: "center",
+  boxSizing: "border-box",
+  userSelect: "none",
+  "&::before": {
+    boxSizing: "border-box"
+  },
+  "&::after": {
+    boxSizing: "border-box"
+  },
+  fontSize: "$body",
+  fontFamily: "$semi-bold",
+  fontVariantNumeric: "tabular-nums",
+  border: "1px solid none",
+  textAlign: "center",
+  lineHeight: "1.2",
+  transition: "all 240ms ease-in-out",
+  "svg": {
+    width: "24px",
+    height: "24px",
+    marginRight: "$xxx-small",
+    fill: "$text"
+  },
+  "&:disabled": {
+    color: "$neutral-700",
+    backgroundColor: "$neutral-300",
+    cursor: "not-allowed"
+  },
+  variants: {
+    size: {
+      "small": {
+        borderRadius: "4px",
+        height: "40px",
+        p: "$xx-small"
+      },
+      "medium": {
+        borderRadius: "4px",
+        height: "50px",
+        p: "$x-small",
+        fontSize: "$body"
+      },
+      "large": {
+        borderRadius: "4px",
+        height: "50px",
+        p: "$x-small",
+        fontSize: "$body"
+      }
+    },
+    variant: {
+      default: {
+        backgroundColor: "$neutral",
+        "&:hover:not(:disabled)": {
+          backgroundColor: "$neutral-700"
+        }
+      },
+      github: {
+        backgroundColor: "$neutral-800",
+        color: "#FFF",
+        "&:hover:not(:disabled)": {
+          backgroundColor: "$neutral-700"
+        }
+      },
+      gitlab: {
+        backgroundColor: "$primary-400",
+        color: "#FFF",
+        "&:hover:not(:disabled)": {
+          backgroundColor: "$neutral-300"
+        }
+      },
+      bitbucket: {
+        backgroundColor: "$primary",
+        color: "#FFF",
+        "&:hover:not(:disabled)": {
+          backgroundColor: "$neutral-400"
+        }
+      },
+      metamask: {
+        backgroundColor: "$neutral-700",
+        color: "#FFF",
+        "&:hover:not(:disabled)": {
+          backgroundColor: "$neutral-800"
+        }
+      },
+      anchor: {
+        backgroundColor: "$primary-400",
+        color: "#FFF",
+        "&:hover:not(:disabled)": {
+          backgroundColor: "$primary"
+        }
+      },
+      phantom: {
+        backgroundColor: "$primary",
+        color: "#FFF",
+        "&:hover:not(:disabled)": {
+          backgroundColor: "$primary-600"
+        }
+      }
+    }
+  },
+  defaultVariants: {
+    size: "medium",
+    variant: "default"
+  }
+});
+
+// app/components/WalletLogin.tsx
 var Container3 = styled("div", {
   minHeight: "100vh",
   pt: "4.5rem",
   px: "$regular",
-  maxWidth: "25rem",
+  maxWidth: "350px",
   mx: "auto",
   mb: "$regular",
   mt: 0
 });
 var TitleStyles = styled("h1", {
-  textAlign: "center"
+  textAlign: "center",
+  fontFamily: "$extra-bold"
 });
 var message = "Login to PowerStack Remix";
 var useLoginSubmit = () => {
@@ -762,9 +1063,10 @@ var WalletLogin = () => {
       }
     });
   };
-  return /* @__PURE__ */ React.createElement(Container3, null, /* @__PURE__ */ React.createElement(TitleStyles, null, "Welcome ", user ? "Back" : null, " to PoweStack Remix"), /* @__PURE__ */ React.createElement("button", {
-    onClick: loginWithMetamask
-  }, "Login with Metamask"), /* @__PURE__ */ React.createElement("button", {
+  return /* @__PURE__ */ React.createElement(Container3, null, /* @__PURE__ */ React.createElement(TitleStyles, null, "Welcome ", user ? "Back" : null, " to PoweStack Remix"), /* @__PURE__ */ React.createElement(Button, {
+    onClick: loginWithMetamask,
+    variant: "metamask"
+  }, /* @__PURE__ */ React.createElement(MetamaskIcon_default, null), "Login with Metamask"), /* @__PURE__ */ React.createElement(Button, {
     onClick: loginWithPhantom
   }, "Login with Phantom"));
 };
@@ -777,7 +1079,7 @@ function Index3() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { "version": "e3657969", "entry": { "module": "/build/entry.client-EALYAEL2.js", "imports": ["/build/_shared/chunk-4ACWVKRS.js", "/build/_shared/chunk-UQBLI7YD.js", "/build/_shared/chunk-HSYOKXM2.js", "/build/_shared/chunk-6SKE6JXS.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-RUAQF2NF.js", "imports": ["/build/_shared/chunk-2TXSFV2Q.js"], "hasAction": false, "hasLoader": true, "hasCatchBoundary": true, "hasErrorBoundary": true }, "routes/$account": { "id": "routes/$account", "parentId": "root", "path": ":account", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/$account-YATQ76WE.js", "imports": void 0, "hasAction": false, "hasLoader": true, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-FROXGZFV.js", "imports": ["/build/_shared/chunk-O3YQV3A4.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/actions/login/$strategy": { "id": "routes/actions/login/$strategy", "parentId": "root", "path": "actions/login/:strategy", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/actions/login/$strategy-MOLQ2Q3Z.js", "imports": void 0, "hasAction": true, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-AMDNUEHG.js", "imports": ["/build/_shared/chunk-O3YQV3A4.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-E3657969.js" };
+var assets_manifest_default = { "version": "a83e0274", "entry": { "module": "/build/entry.client-EI3V2OH5.js", "imports": ["/build/_shared/chunk-4ACWVKRS.js", "/build/_shared/chunk-5W3WKP6F.js", "/build/_shared/chunk-HSYOKXM2.js", "/build/_shared/chunk-6SKE6JXS.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-VCWUXH3Z.js", "imports": ["/build/_shared/chunk-CT432GRZ.js"], "hasAction": false, "hasLoader": true, "hasCatchBoundary": true, "hasErrorBoundary": true }, "routes/$account": { "id": "routes/$account", "parentId": "root", "path": ":account", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/$account-YATQ76WE.js", "imports": void 0, "hasAction": false, "hasLoader": true, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-NBW5WPEA.js", "imports": ["/build/_shared/chunk-EV44F5H4.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/actions/login/$strategy": { "id": "routes/actions/login/$strategy", "parentId": "root", "path": "actions/login/:strategy", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/actions/login/$strategy-MOLQ2Q3Z.js", "imports": void 0, "hasAction": true, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-QMQVAPRF.js", "imports": ["/build/_shared/chunk-EV44F5H4.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-A83E0274.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };

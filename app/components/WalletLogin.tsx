@@ -4,12 +4,14 @@ import _ from 'lodash'
 import { ethers } from 'ethers'
 import { useFetcher, useLocation } from '@remix-run/react'
 import { ethereum, isPhantom, solana } from '~/library'
+import { Button } from '~/components/Button'
+import { MetamaskIcon } from '~/components/icons'
 
 const Container = styled('div', {
   minHeight: '100vh',
   pt: '4.5rem',
   px: '$regular',
-  maxWidth: '25rem',
+  maxWidth: '350px',
   mx: 'auto',
   mb: '$regular',
   mt: 0,
@@ -17,6 +19,7 @@ const Container = styled('div', {
 
 const TitleStyles = styled('h1', {
   textAlign: 'center',
+  fontFamily: '$extra-bold',
 })
 const message = 'Login to PowerStack Remix'
 
@@ -87,7 +90,10 @@ export const WalletLogin = () => {
     <Container>
       <TitleStyles>Welcome {user ? 'Back' : null} to PoweStack Remix</TitleStyles>
       {/* <h3>Rinkeby</h3> */}
-      <button onClick={loginWithMetamask}>Login with Metamask</button>
+      <Button onClick={loginWithMetamask} variant="metamask">
+        <MetamaskIcon />
+        Login with Metamask
+      </Button>
       {/* <p>
         Address:{' '}
         {user?.address && user?.network === 'rinkeby'
@@ -95,7 +101,7 @@ export const WalletLogin = () => {
           : 'wallet not connected'}
       </p> */}
       {/* <h3>Solana</h3> */}
-      <button onClick={loginWithPhantom}>Login with Phantom</button>
+      <Button onClick={loginWithPhantom}>Login with Phantom</Button>
       {/* <p>
         Address:{' '}
         {user?.address && user?.network === 'solana'

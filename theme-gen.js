@@ -7,6 +7,7 @@ const new_theme = {
   typeStyles: {},
   radii: {},
   shadows: {},
+  transitions: {},
 }
 
 console.log(`〰️ Processing Toolabs JSON Theme...`)
@@ -46,9 +47,10 @@ Object.keys(theme).forEach((t_key) => {
       })
       break
     }
+    // transitions...
     case 'durations':
       theme[t_key].forEach((prop) => {
-        new_theme[t_key][prop.name] = prop.duration
+        new_theme.transitions[prop.name] = `${prop.duration}ms`
       })
       break
     case 'fonts':
