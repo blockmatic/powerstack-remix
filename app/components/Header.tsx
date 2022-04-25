@@ -2,7 +2,7 @@ import { Flex } from './Flex';
 import { Container } from './Container';
 import { styled } from '~/styles/stitches.config'
 import { Link } from '@remix-run/react'
-import { GhLoginIcon } from './icons';
+import { BlockmaticIcon, GhLoginIcon } from './icons';
 
 export function Header() {
   const linkStyles = {
@@ -52,24 +52,26 @@ export function Header() {
     <NavBar>
       <Container>
         <Flex justify="between" align="center">
-            {/* ToDo: Logo needs to be improved */}
-            <Logo src="/logo-text-icon.png" alt="Blockmatic Logo" />
-            <Flex
-              justify="end"
-              as="nav"
-              role="navigation"
-              aria-labelledby="main-nav-title"
-              align="center"
+          {/* ToDo: Logo needs to be improved */}
+          <Flex css={{ 'svg': { height: '32px', width: 'max-content' } }}>
+            <BlockmaticIcon />
+          </Flex>
+          <Flex
+            justify="end"
+            as="nav"
+            role="navigation"
+            aria-labelledby="main-nav-title"
+            align="center"
+          >
+            <VisuallyHidden>Main navigation</VisuallyHidden>
+            <LinkItem to="#">Login</LinkItem>
+            <AnchorItem
+              aria-label="Go to Powerstack Template"
+              href="https://github.com/blockmatic/powerstack-remix"
             >
-              <VisuallyHidden>Main navigation</VisuallyHidden>
-              <LinkItem to="#">Login</LinkItem>
-              <AnchorItem
-                aria-label="Go to Powerstack Template"
-                href="https://github.com/blockmatic/powerstack-remix"
-              >
-                <GhLoginIcon />
-              </AnchorItem>
-            </Flex>
+              <GhLoginIcon />
+            </AnchorItem>
+          </Flex>
         </Flex>
       </Container>
     </NavBar>
