@@ -36,11 +36,6 @@ export const { styled, globalCss, getCssText, config }  = createStitches({
     fonts: lightTheme.fonts,
     fontSizes: getFontSizes()
   },
-  styles: {
-    h1: {
-      fontFamily: 'Gilroy-ExtraBold',
-    }
-  },
   media: {
     tabletUp: '(min-width: 768px)',
     desktopUp: '(min-width: 1024px)',
@@ -132,5 +127,26 @@ export const globalStyles = globalCss({
   },
   '*, *::before, *::after': {
     boxSizing: 'border-box',
+    '-webkit-font-smoothing': 'antialiased',
+    '-moz-osx-font-smoothing': 'grayscale',
+    scrollBehavior: 'smooth',
   },
+  '::-webkit-scrollbar': {
+    width: '13px',
+    height: '13px',
+    right: 0,
+  },
+  '::-webkit-scrollbar-track, ::-webkit-scrollbar-corner': {
+    background: '$neutral-200',
+  },
+
+  '::-webkit-scrollbar-thumb': {
+    background: '$neutral-600',
+    borderRadius: '18px',
+    border: '3px solid $neutral-200',
+  },
+
+  '::-webkit-scrollbar-thumb:hover': {
+    background: '$neutral-700',
+  }
 })

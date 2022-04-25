@@ -119,11 +119,6 @@ var { styled, globalCss, getCssText, config } = (0, import_react.createStitches)
     fonts: light_theme_default.fonts,
     fontSizes: getFontSizes()
   },
-  styles: {
-    h1: {
-      fontFamily: "Gilroy-ExtraBold"
-    }
-  },
   media: {
     tabletUp: "(min-width: 768px)",
     desktopUp: "(min-width: 1024px)",
@@ -208,7 +203,26 @@ var globalStyles = globalCss({
     margin: 0
   },
   "*, *::before, *::after": {
-    boxSizing: "border-box"
+    boxSizing: "border-box",
+    "-webkit-font-smoothing": "antialiased",
+    "-moz-osx-font-smoothing": "grayscale",
+    scrollBehavior: "smooth"
+  },
+  "::-webkit-scrollbar": {
+    width: "13px",
+    height: "13px",
+    right: 0
+  },
+  "::-webkit-scrollbar-track, ::-webkit-scrollbar-corner": {
+    background: "$neutral-200"
+  },
+  "::-webkit-scrollbar-thumb": {
+    background: "$neutral-600",
+    borderRadius: "18px",
+    border: "3px solid $neutral-200"
+  },
+  "::-webkit-scrollbar-thumb:hover": {
+    background: "$neutral-700"
   }
 });
 
@@ -1187,7 +1201,7 @@ function Index3() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { "version": "e8aecc73", "entry": { "module": "/build/entry.client-EI3V2OH5.js", "imports": ["/build/_shared/chunk-4ACWVKRS.js", "/build/_shared/chunk-5W3WKP6F.js", "/build/_shared/chunk-HSYOKXM2.js", "/build/_shared/chunk-6SKE6JXS.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-VCWUXH3Z.js", "imports": ["/build/_shared/chunk-CT432GRZ.js"], "hasAction": false, "hasLoader": true, "hasCatchBoundary": true, "hasErrorBoundary": true }, "routes/$account": { "id": "routes/$account", "parentId": "root", "path": ":account", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/$account-YATQ76WE.js", "imports": void 0, "hasAction": false, "hasLoader": true, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-AACFMUWS.js", "imports": ["/build/_shared/chunk-RCSELIA4.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/actions/login/$strategy": { "id": "routes/actions/login/$strategy", "parentId": "root", "path": "actions/login/:strategy", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/actions/login/$strategy-MOLQ2Q3Z.js", "imports": void 0, "hasAction": true, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-KO63NFPO.js", "imports": ["/build/_shared/chunk-RCSELIA4.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-E8AECC73.js" };
+var assets_manifest_default = { "version": "82da0ffe", "entry": { "module": "/build/entry.client-BHI5EX3M.js", "imports": ["/build/_shared/chunk-4ACWVKRS.js", "/build/_shared/chunk-3PXZCUG3.js", "/build/_shared/chunk-HSYOKXM2.js", "/build/_shared/chunk-6SKE6JXS.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-O74SMPGC.js", "imports": ["/build/_shared/chunk-JQ3ESG54.js"], "hasAction": false, "hasLoader": true, "hasCatchBoundary": true, "hasErrorBoundary": true }, "routes/$account": { "id": "routes/$account", "parentId": "root", "path": ":account", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/$account-YATQ76WE.js", "imports": void 0, "hasAction": false, "hasLoader": true, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-WVKCUSTH.js", "imports": ["/build/_shared/chunk-ZB5ZZYYU.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/actions/login/$strategy": { "id": "routes/actions/login/$strategy", "parentId": "root", "path": "actions/login/:strategy", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/actions/login/$strategy-MOLQ2Q3Z.js", "imports": void 0, "hasAction": true, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-E2ZIHFPF.js", "imports": ["/build/_shared/chunk-ZB5ZZYYU.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-82DA0FFE.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };
