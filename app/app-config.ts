@@ -10,7 +10,10 @@ type FeatureFlags = {}
 type Contracts = {}
 
 // apis and other services
-type Services = {}
+type Services = {
+  graphql_api: string
+  graphql_api_key: string
+}
 
 type Analytics = {
   google: string
@@ -46,16 +49,19 @@ export const appconfig: AppConfig = {
   },
   contracts: {},
   services: {
-    graphql_api: env.get('GRAPHQL_API').required().asString(),
+    graphql_api:
+      env.get('GRAPHQL_API').asString() ||
+      'https://powerstack.hasura.app/v1/graphql',
+    graphql_api_key: env.get('GRAPHQL_API_KEY').asString() || '123',
   },
   analytics: {
     google: env.get('GOOGLE_ANALYTICS').asString() || '',
     sentry: env.get('SENTRY_DSN').asString() || '',
   },
   cloudinary: {
-    cloudName: env.get('CLOUDINARY_CLOUD_NAME').required().asString(),
-    apiKey: env.get('CLOUDINARY_API_KEY').required().asString(),
-    apiSecret: env.get('CLOUDINARY_API_SECRET').required().asString(),
+    cloud_name: env.get('CLOUDINARY_CLOUD_NAME').required().asString(),
+    api_key: env.get('CLOUDINARY_API_KEY').required().asString(),
+    api_secret: env.get('CLOUDINARY_API_SECRET').required().asString(),
   },
   features: {},
 }

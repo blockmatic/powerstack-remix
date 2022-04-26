@@ -24,7 +24,6 @@ const Container = styled('div', {
   padding: '1em',
 })
 
-
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
   title: 'Remix with Stitches',

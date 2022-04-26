@@ -3,6 +3,10 @@ import { RemixBrowser } from '@remix-run/react'
 import { hydrate } from 'react-dom'
 import { getCssText } from './styles/stitches.config'
 import ClientStyleContext from './styles/client.context'
+import {
+  ApolloProvider,
+  createApolloClientBrowser,
+} from './graphql/apollo.browser'
 
 interface ClientCacheProviderProps {
   children: React.ReactNode
@@ -24,7 +28,9 @@ function ClientCacheProvider({ children }: ClientCacheProviderProps) {
 
 hydrate(
   <ClientCacheProvider>
-    <RemixBrowser />
+    <ApolloProvider client={createApolloClientBrowser()}>
+      <RemixBrowser />
+    </ApolloProvider>
   </ClientCacheProvider>,
   document,
 )

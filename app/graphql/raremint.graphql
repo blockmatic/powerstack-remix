@@ -1,0 +1,13 @@
+subscription Prices($where: prices_bool_exp = {}) {
+  prices(where: $where) {
+    pair
+    price
+  }
+}
+
+subscription PricesByPair($pair: String!) {
+  prices_by_pk(pair: $pair) {
+    pair
+    price
+  }
+}
