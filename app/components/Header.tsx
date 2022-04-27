@@ -16,9 +16,9 @@ export function Header() {
   }
 
   const NavBar = styled(Flex, {
-    backdropFilter: 'saturate(180%) blur(5px)',
-    boxShadow: 'inset 0 -1px 0 0 rgba(0,0,0,.1)',
-    bg: '$header-bg',
+    backdropFilter: 'saturate(180%) blur(10px)',
+    // NOTE: Sticky shadow, maybe less depth...
+    // boxShadow: '0px 12px 20px 0px #00000014, 6px 6px 6px 0px #0000000a',
     position: 'sticky',
     py: '$x-small',
     top: 0,

@@ -20,7 +20,6 @@ export const { styled, globalCss, getCssText, config }  = createStitches({
     // colors,
     colors: {
       ...lightTheme.colors,
-      'header-bg': 'hsla(0,0%,100%,.8)'
     },
     sizes: {
       container: '78.5rem',

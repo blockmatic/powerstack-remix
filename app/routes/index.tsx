@@ -4,21 +4,29 @@ import { Header } from '~/components/Header'
 import { styled } from '~/styles/stitches.config'
 import { Container } from '~/components/Container'
 import { Footer } from '~/components/Footer'
+import { Flex } from '~/components/Flex'
 
-const MainContent = styled(Container, {
-  minHeight: 'calc(100vh - 120px)',
+const MainContent = styled(Flex, {
+  minHeight: '75vh',
   position: 'relative',
+})
+const LoginBackground = styled('div', {
+  background: '$login',
+  width: '100%',
+  height: '100%',
 })
 
 export default function Index() {
   return (
-    <div>
+    <LoginBackground>
       <Header />
-      <MainContent>
-        <WalletLogin />
+      <MainContent align="center" justify="center">
+        <Container>
+          <WalletLogin />
+        </Container>
       </MainContent>
 
       <Footer />
-    </div>
+    </LoginBackground>
   )
 }

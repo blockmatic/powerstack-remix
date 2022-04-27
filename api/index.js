@@ -68,10 +68,10 @@ var import_react = require("@stitches/react");
 // app/styles/light-theme.json
 var name = "light";
 var typeStyles = { "display-1": { fontFamily: "Gilroy-ExtraBold", fontSize: "48px", lineHeight: "62px", letterSpacing: "0.1em" }, "display-2": { fontFamily: "Gilroy-ExtraBold", fontSize: "40px", lineHeight: "52px", letterSpacing: "0.1em" }, "h-1": { fontFamily: "Gilroy-Bold", fontSize: "33px", lineHeight: "44px", letterSpacing: "0.1em" }, "h-2": { fontFamily: "Gilroy-Bold", fontSize: "28px", lineHeight: "38px", letterSpacing: "0.1em" }, "h-3": { fontFamily: "Gilroy-Bold", fontSize: "23px", lineHeight: "32px", letterSpacing: "0.1em" }, "h-4": { fontFamily: "Gilroy-Bold", fontSize: "19px", lineHeight: "27px", letterSpacing: "0.1em" }, "h-5": { fontFamily: "Gilroy-Bold", fontSize: "16px", lineHeight: "23px", letterSpacing: "0.1em" }, body: { fontFamily: "Gilroy-Bold", fontSize: "16px", lineHeight: "23px", letterSpacing: "0.1em" }, small: { fontFamily: "Gilroy-SemiBold", fontSize: "13px", lineHeight: "20px", letterSpacing: "0.1em" }, "x-small": { fontFamily: "Gilroy-SemiBold", fontSize: "11px", lineHeight: "17px", letterSpacing: "0.1em" } };
-var radii = { "radius-4": "4px", "radius-6": "6px", "radius-12": "12px", "radius-20": "20px" };
+var radii = { "radius-18": "18px", "radius-32": "32px", "radius-40": "40px", "radius-24": "24px", "radius-14": "14px" };
 var shadows = { "drop-shadow-1": "0px 4px 8px 0px #00000014, 2px 2px 2px 0px #0000000a", "drop-shadow-2": "0px 8px 16px 0px #00000014, 4px 4px 4px 0px #0000000a", "drop-shadow-3": "0px 12px 20px 0px #00000014, 6px 6px 6px 0px #0000000a", "drop-shadow-4": "0px 16px 24px 0px #00000014, 8px 8px 8px 0px #0000000a", "drop-shadow-5": "0px 24px 28px 0px #00000014, 12px 12px 12px 0px #0000000a" };
 var transitions = { instant: "0ms", "x-fast": "107ms", fast: "160ms", normal: "240ms", slow: "360ms", "x-slow": "540ms" };
-var colors = { primary: "#044bff", "shadow-layer-1": "#00000014", "shadow-layer-2": "#0000000a", background: "#ffffff", neutral: "#eaeef0", "neutral-400": "#eef2f3", "neutral-300": "#f2f5f7", "neutral-600": "#b3c1c8", "neutral-700": "#7d94a0", "neutral-200": "#f6f8fa", "neutral-800": "#51646d", text: "#000505", "primary-400": "#1d5dff", "primary-300": "#366fff", "primary-200": "#4f81ff", "primary-600": "#033ccc", "primary-700": "#052e96", "primary-800": "#052062" };
+var colors = { login: "linear-gradient(0deg, #ffffffe6 8.333%,#f9f9fb 33.333%)", primary: "#044bff", "shadow-layer-1": "#00000014", "shadow-layer-2": "#0000000a", background: "#ffffff", neutral: "#eaeef0", "neutral-400": "#eef2f3", "neutral-300": "#f2f5f7", "neutral-600": "#b3c1c8", "neutral-700": "#7d94a0", "neutral-200": "#f6f8fa", "neutral-800": "#51646d", text: "#000505", "primary-400": "#2e69ff", "primary-300": "#5887ff", "primary-200": "#82a5ff", "primary-600": "#043fd4", "primary-700": "#0633a7", "primary-800": "#06277b" };
 var fonts = { bold: "Gilroy-Bold", "extra-bold": "Gilroy-ExtraBold", "semi-bold": "Gilroy-SemiBold" };
 var easeCurves = { "in-out-quint": { x1: 0.86, y1: 0, x2: 0.07, y2: 1 }, "out-quint": { x1: 0.23, y1: 1, x2: 0.32, y2: 1 }, "in-sine": { x1: 0.47, y1: 0, x2: 0.745, y2: 0.715 } };
 var space = { none: "0px", "xxx-small": "6px", "xx-small": "9px", "x-small": "14px", small: "21px", regular: "32px", large: "48px", "x-large": "72px", "xx-large": "108px", "xxx-large": "162px" };
@@ -80,14 +80,14 @@ var light_theme_default = { name, typeStyles, radii, shadows, transitions, color
 // app/styles/dark-theme.json
 var name2 = "dark";
 var typeStyles2 = { "display-1": { fontFamily: "Gilroy-ExtraBold", fontSize: "48px", lineHeight: "62px", letterSpacing: "0.1em" }, "display-2": { fontFamily: "Gilroy-ExtraBold", fontSize: "40px", lineHeight: "52px", letterSpacing: "0.1em" }, "h-1": { fontFamily: "Gilroy-Bold", fontSize: "33px", lineHeight: "44px", letterSpacing: "0.1em" }, "h-2": { fontFamily: "Gilroy-Bold", fontSize: "28px", lineHeight: "38px", letterSpacing: "0.1em" }, "h-3": { fontFamily: "Gilroy-Bold", fontSize: "23px", lineHeight: "32px", letterSpacing: "0.1em" }, "h-4": { fontFamily: "Gilroy-Bold", fontSize: "19px", lineHeight: "27px", letterSpacing: "0.1em" }, "h-5": { fontFamily: "Gilroy-Bold", fontSize: "16px", lineHeight: "23px", letterSpacing: "0.1em" }, body: { fontFamily: "Gilroy-Bold", fontSize: "16px", lineHeight: "23px", letterSpacing: "0.1em" }, small: { fontFamily: "Gilroy-SemiBold", fontSize: "13px", lineHeight: "20px", letterSpacing: "0.1em" }, "x-small": { fontFamily: "Gilroy-SemiBold", fontSize: "11px", lineHeight: "17px", letterSpacing: "0.1em" } };
-var radii2 = { "radius-4": "4px", "radius-6": "6px", "radius-12": "12px", "radius-20": "20px" };
+var radii2 = { "radius-18": "18px", "radius-32": "32px", "radius-40": "40px", "radius-24": "24px", "radius-14": "14px" };
 var shadows2 = { "drop-shadow-1": "0px 4px 8px 0px #0000003d, 2px 2px 2px 0px #0000001f", "drop-shadow-2": "0px 8px 16px 0px #0000003d, 4px 4px 4px 0px #00000021", "drop-shadow-3": "0px 12px 20px 0px #0000003d, 6px 6px 6px 0px #0000001f", "drop-shadow-4": "0px 16px 24px 0px #0000003d, 8px 8px 8px 0px #0000001f", "drop-shadow-5": "0px 24px 28px 0px #0000003d, 12px 12px 12px 0px #0000001f" };
-var colors2 = { primary: "#00023e", "shadow-layer-1": "#00000014", "shadow-layer-2": "#0000000a", background: "#002f2f", neutral: "#eaeef0", "neutral-400": "#eef2f3", "neutral-300": "#f2f5f7", "neutral-600": "#b3c1c8", "neutral-700": "#7d94a0", "neutral-200": "#f6f8fa", "neutral-800": "#51646d", text: "#fefefe", "primary-400": "#00036b", "primary-300": "#000598", "primary-200": "#0006c4", "primary-600": "#010231", "primary-700": "#010224", "primary-800": "#010218" };
+var transitions2 = { instant: "0ms", "x-fast": "107ms", fast: "160ms", normal: "240ms", slow: "360ms", "x-slow": "540ms" };
+var colors2 = { login: "#141416", primary: "#00023e", "shadow-layer-1": "#00000014", "shadow-layer-2": "#0000000a", background: "#002f2f", neutral: "#eaeef0", "neutral-400": "#eef2f3", "neutral-300": "#f2f5f7", "neutral-600": "#b3c1c8", "neutral-700": "#7d94a0", "neutral-200": "#f6f8fa", "neutral-800": "#51646d", text: "#fefefe", "primary-400": "#00036b", "primary-300": "#000598", "primary-200": "#0006c4", "primary-600": "#010231", "primary-700": "#010224", "primary-800": "#010218" };
 var fonts2 = { bold: "Gilroy-Bold", "extra-bold": "Gilroy-ExtraBold", "semi-bold": "Gilroy-SemiBold" };
-var durations = { instant: "0", "x-fast": "107", fast: "160", normal: "240", slow: "360", "x-slow": "540" };
 var easeCurves2 = { "in-out-quint": { x1: 0.86, y1: 0, x2: 0.07, y2: 1 }, "out-quint": { x1: 0.23, y1: 1, x2: 0.32, y2: 1 }, "in-sine": { x1: 0.47, y1: 0, x2: 0.745, y2: 0.715 } };
 var space2 = { none: "0px", "xxx-small": "6px", "xx-small": "9px", "x-small": "14px", small: "21px", regular: "32px", large: "48px", "x-large": "72px", "xx-large": "108px", "xxx-large": "162px" };
-var dark_theme_default = { name: name2, typeStyles: typeStyles2, radii: radii2, shadows: shadows2, colors: colors2, fonts: fonts2, durations, easeCurves: easeCurves2, space: space2 };
+var dark_theme_default = { name: name2, typeStyles: typeStyles2, radii: radii2, shadows: shadows2, transitions: transitions2, colors: colors2, fonts: fonts2, easeCurves: easeCurves2, space: space2 };
 
 // app/styles/stitches.config.ts
 console.log("Light Theme for Stitches\n", light_theme_default);
@@ -102,9 +102,7 @@ var getFontSizes = () => {
 };
 var { styled, globalCss, getCssText, config } = (0, import_react.createStitches)({
   theme: {
-    colors: __spreadProps(__spreadValues({}, light_theme_default.colors), {
-      "header-bg": "hsla(0,0%,100%,.8)"
-    }),
+    colors: __spreadValues({}, light_theme_default.colors),
     sizes: {
       container: "78.5rem",
       iconSmall: "1.375rem",
@@ -241,7 +239,7 @@ function handleRequest(request, responseStatusCode, responseHeaders, remixContex
   });
 }
 
-// route:D:\Users\Andler\Development\git_local\remix\powerstack-remix\app\root.tsx
+// route:/home/andler/Development/git_local/remix/powerstack-remix/app/root.tsx
 var root_exports = {};
 __export(root_exports, {
   CatchBoundary: () => CatchBoundary,
@@ -418,7 +416,7 @@ var ClientStyleContext = (0, import_react3.createContext)({
 });
 var client_context_default = ClientStyleContext;
 
-// route:D:\Users\Andler\Development\git_local\remix\powerstack-remix\app\root.tsx
+// route:/home/andler/Development/git_local/remix/powerstack-remix/app/root.tsx
 var Container = styled("div", {
   backgroundColor: "#ff0000",
   padding: "1em"
@@ -472,7 +470,7 @@ function ErrorBoundary({ error }) {
   }, /* @__PURE__ */ React.createElement(Container, null, /* @__PURE__ */ React.createElement("p", null, "[ErrorBoundary]: There was an error: ", error.message)));
 }
 
-// route:D:\Users\Andler\Development\git_local\remix\powerstack-remix\app\routes\actions\login\$strategy.tsx
+// route:/home/andler/Development/git_local/remix/powerstack-remix/app/routes/actions/login/$strategy.tsx
 var strategy_exports = {};
 __export(strategy_exports, {
   action: () => action
@@ -486,7 +484,7 @@ var action = async ({ request, params }) => {
   });
 };
 
-// route:D:\Users\Andler\Development\git_local\remix\powerstack-remix\app\routes\$account.tsx
+// route:/home/andler/Development/git_local/remix/powerstack-remix/app/routes/$account.tsx
 var account_exports = {};
 __export(account_exports, {
   default: () => Index,
@@ -507,7 +505,7 @@ function Index() {
   return /* @__PURE__ */ React.createElement("pre", null, JSON.stringify(account, null, 2));
 }
 
-// route:D:\Users\Andler\Development\git_local\remix\powerstack-remix\app\routes\about.tsx
+// route:/home/andler/Development/git_local/remix/powerstack-remix/app/routes/about.tsx
 var about_exports = {};
 __export(about_exports, {
   default: () => Index2
@@ -938,9 +936,7 @@ function Header() {
     }
   };
   const NavBar = styled(Flex, {
-    backdropFilter: "saturate(180%) blur(5px)",
-    boxShadow: "inset 0 -1px 0 0 rgba(0,0,0,.1)",
-    bg: "$header-bg",
+    backdropFilter: "saturate(180%) blur(10px)",
     position: "sticky",
     py: "$x-small",
     top: 0,
@@ -986,13 +982,13 @@ function Header() {
   }, /* @__PURE__ */ React.createElement(GhLoginIcon_default, null))))));
 }
 
-// route:D:\Users\Andler\Development\git_local\remix\powerstack-remix\app\routes\about.tsx
+// route:/home/andler/Development/git_local/remix/powerstack-remix/app/routes/about.tsx
 function Index2() {
   const { user } = useStore();
   return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(Header, null), /* @__PURE__ */ React.createElement("h1", null, "Something"), /* @__PURE__ */ React.createElement("pre", null, JSON.stringify(user, null, 2)));
 }
 
-// route:D:\Users\Andler\Development\git_local\remix\powerstack-remix\app\routes\index.tsx
+// route:/home/andler/Development/git_local/remix/powerstack-remix/app/routes/index.tsx
 var routes_exports = {};
 __export(routes_exports, {
   default: () => Index3
@@ -1111,16 +1107,48 @@ var Button = styled("button", {
   }
 });
 
-// app/components/WalletLogin.tsx
+// app/components/Text.tsx
+var Text = styled("p", {
+  fontFamily: "$semi-bold",
+  fontSize: "$body",
+  lineHeight: "1.2",
+  variants: {
+    variant: {
+      h1: {
+        rt: "center",
+        fontFamily: "$extra-bold",
+        fontSize: "$h-1"
+      },
+      h2: {
+        rt: "center",
+        fontFamily: "$extra-bold",
+        fontSize: "$h-2"
+      },
+      h3: {
+        rt: "center",
+        fontFamily: "$extra-bold",
+        fontSize: "$h-3"
+      },
+      h4: {
+        rt: "center",
+        fontFamily: "$extra-bold",
+        fontSize: "$h-4"
+      }
+    }
+  }
+});
+
+// app/components/Card.tsx
 var Card = styled(Flex, {
-  maxWidth: "350px",
-  my: "$x-large",
+  maxWidth: "574px",
   mx: "auto",
-  borderRadius: "4px",
+  borderRadius: "40px",
   px: "$small",
   py: "$large",
   transition: "all 160ms ease-in-out",
-  boxShadow: "0px 4px 8px 0px #00000014, 2px 2px 2px 0px #0000000a",
+  position: "relative",
+  background: "#fff8",
+  backdropFilter: "saturate(180%) blur(10px)",
   "> button, > hr": {
     width: "100%",
     mb: "$small"
@@ -1133,17 +1161,37 @@ var Card = styled(Flex, {
     mb: "$regular"
   },
   "&:hover": {
-    boxShadow: "0px 8px 16px 0px #00000014, 4px 4px 4px 0px #0000000a"
+    boxShadow: "0px 12px 20px 0px #00000014, 6px 6px 6px 0px #0000000a",
+    "&::before": {
+      minHeight: "calc(100% - 4px)",
+      minWidth: "100%"
+    }
   },
   "@tabletUp": {
-    px: "$large"
+    px: "$x-large"
+  },
+  variants: {
+    variant: {
+      glass: {
+        backgroundImage: "url('/assets/images/glass-bg')",
+        "&::before": {
+          transition: "all 160ms ease-in-out",
+          backgroundColor: "#0000000a",
+          content: "",
+          minHeight: "calc(100% - 8px)",
+          minWidth: "calc(100% - 2px)",
+          position: "absolute",
+          bottom: 0,
+          right: 0,
+          boxShadow: "0px 8px 16px 0px #00000014, 4px 4px 4px 0px #0000000a",
+          filter: "blur(10px)"
+        }
+      }
+    }
   }
 });
-var TitleStyles = styled("h1", {
-  textAlign: "center",
-  fontFamily: "$extra-bold",
-  mb: "$regular"
-});
+
+// app/components/WalletLogin.tsx
 var message = "Login to PowerStack Remix";
 var useLoginSubmit = () => {
   const location = (0, import_react8.useLocation)();
@@ -1193,35 +1241,41 @@ var WalletLogin = () => {
   };
   return /* @__PURE__ */ React.createElement(Card, {
     direction: "column"
-  }, /* @__PURE__ */ React.createElement(TitleStyles, {
-    css: { fontSize: "$h-2" }
+  }, /* @__PURE__ */ React.createElement(Text, {
+    as: "h1",
+    mb: true,
+    css: { mb: "$regular" }
   }, "Welcome ", user ? "Back" : null, " to PoweStack Remix"), /* @__PURE__ */ React.createElement(Button, {
+    css: { mb: "$small" },
     onClick: loginWithPhantom,
     variant: "phantom"
   }, /* @__PURE__ */ React.createElement(PhantonIcon_default, null), "Login with Phantom"), /* @__PURE__ */ React.createElement(Button, {
+    css: { mb: "$small" },
     onClick: loginWithMetamask,
     variant: "metamask"
   }, /* @__PURE__ */ React.createElement(MetamaskIcon_default, null), "Login with Metamask"), /* @__PURE__ */ React.createElement(Button, {
+    css: { mb: "$small" },
     onClick: () => console.log("I'm dummy, gimme power!"),
     variant: "anchor"
-  }, /* @__PURE__ */ React.createElement(AnchorIcon_default, null), "Login with Anchor"), /* @__PURE__ */ React.createElement("hr", null), /* @__PURE__ */ React.createElement(Button, {
+  }, /* @__PURE__ */ React.createElement(AnchorIcon_default, null), "Login with Anchor"), /* @__PURE__ */ React.createElement("hr", null), /* @__PURE__ */ React.createElement(Flex, {
+    justify: "between"
+  }, /* @__PURE__ */ React.createElement(Button, {
+    css: { "svg": { mr: 0 } },
     onClick: () => console.log("I'm dummy, gimme power!"),
-    variant: "oAuth"
-  }, /* @__PURE__ */ React.createElement(GhLoginIcon_default, null), "Login with Github"), /* @__PURE__ */ React.createElement(Button, {
+    variant: "oAuth",
+    "aria-label": "Login with Github"
+  }, /* @__PURE__ */ React.createElement(GhLoginIcon_default, null)), /* @__PURE__ */ React.createElement(Button, {
+    css: { "svg": { mr: 0 } },
     onClick: () => console.log("I'm dummy, gimme power!"),
-    variant: "oAuth"
-  }, /* @__PURE__ */ React.createElement(GitlabIcon_default, null), "Login with Gitlab"), /* @__PURE__ */ React.createElement(Button, {
+    variant: "oAuth",
+    "aria-label": "Login with Gitlab"
+  }, /* @__PURE__ */ React.createElement(GitlabIcon_default, null)), /* @__PURE__ */ React.createElement(Button, {
+    css: { "svg": { mr: 0 } },
     onClick: () => console.log("I'm dummy, gimme power!"),
-    variant: "oAuth"
-  }, /* @__PURE__ */ React.createElement(BitbucketIcon_default, null), "Login with BitBucket"));
+    variant: "oAuth",
+    "aria-label": "Login with BitBucket"
+  }, /* @__PURE__ */ React.createElement(BitbucketIcon_default, null))));
 };
-
-// app/components/Text.tsx
-var Text = styled("p", {
-  fontFamily: "$semi-bold",
-  fontSize: "$body",
-  lineHeight: "1.2"
-});
 
 // app/components/Footer.tsx
 var ExternalLink = styled("a", {
@@ -1247,17 +1301,25 @@ var Footer = () => /* @__PURE__ */ React.createElement(Flex, {
   variant: "transparent"
 }, /* @__PURE__ */ React.createElement(LightModeIcon_default, null))));
 
-// route:D:\Users\Andler\Development\git_local\remix\powerstack-remix\app\routes\index.tsx
-var MainContent = styled(Container2, {
-  minHeight: "calc(100vh - 120px)",
+// route:/home/andler/Development/git_local/remix/powerstack-remix/app/routes/index.tsx
+var MainContent = styled(Flex, {
+  minHeight: "75vh",
   position: "relative"
 });
+var LoginBackground = styled("div", {
+  background: "$login",
+  width: "100%",
+  height: "100%"
+});
 function Index3() {
-  return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(Header, null), /* @__PURE__ */ React.createElement(MainContent, null, /* @__PURE__ */ React.createElement(WalletLogin, null)), /* @__PURE__ */ React.createElement(Footer, null));
+  return /* @__PURE__ */ React.createElement(LoginBackground, null, /* @__PURE__ */ React.createElement(Header, null), /* @__PURE__ */ React.createElement(MainContent, {
+    align: "center",
+    justify: "center"
+  }, /* @__PURE__ */ React.createElement(Container2, null, /* @__PURE__ */ React.createElement(WalletLogin, null))), /* @__PURE__ */ React.createElement(Footer, null));
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { "version": "b4f27e48", "entry": { "module": "/build/entry.client-4TML3SLG.js", "imports": ["/build/_shared/chunk-4ACWVKRS.js", "/build/_shared/chunk-KOAIRNAD.js", "/build/_shared/chunk-HSYOKXM2.js", "/build/_shared/chunk-6SKE6JXS.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-G2NZ656T.js", "imports": ["/build/_shared/chunk-BIMIS6QU.js"], "hasAction": false, "hasLoader": true, "hasCatchBoundary": true, "hasErrorBoundary": true }, "routes/$account": { "id": "routes/$account", "parentId": "root", "path": ":account", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/$account-YATQ76WE.js", "imports": void 0, "hasAction": false, "hasLoader": true, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-WEBSLJOM.js", "imports": ["/build/_shared/chunk-Y35TZX2X.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/actions/login/$strategy": { "id": "routes/actions/login/$strategy", "parentId": "root", "path": "actions/login/:strategy", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/actions/login/$strategy-MOLQ2Q3Z.js", "imports": void 0, "hasAction": true, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-XY2TXBXK.js", "imports": ["/build/_shared/chunk-Y35TZX2X.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-B4F27E48.js" };
+var assets_manifest_default = { "version": "9e6f2a64", "entry": { "module": "/build/entry.client-2YLTT5DQ.js", "imports": ["/build/_shared/chunk-4ACWVKRS.js", "/build/_shared/chunk-IGF2GTPG.js", "/build/_shared/chunk-HSYOKXM2.js", "/build/_shared/chunk-6SKE6JXS.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-TAD7C34G.js", "imports": ["/build/_shared/chunk-NZCW4K3I.js"], "hasAction": false, "hasLoader": true, "hasCatchBoundary": true, "hasErrorBoundary": true }, "routes/$account": { "id": "routes/$account", "parentId": "root", "path": ":account", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/$account-7HUZDDZ2.js", "imports": void 0, "hasAction": false, "hasLoader": true, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-SQYP3ZYM.js", "imports": ["/build/_shared/chunk-ZP6SWP5O.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/actions/login/$strategy": { "id": "routes/actions/login/$strategy", "parentId": "root", "path": "actions/login/:strategy", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/actions/login/$strategy-A4JWLL7V.js", "imports": void 0, "hasAction": true, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-YZ7RU4OW.js", "imports": ["/build/_shared/chunk-ZP6SWP5O.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-9E6F2A64.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };
@@ -1310,4 +1372,4 @@ module.exports = __toCommonJS(stdin_exports);
   entry,
   routes
 });
-//# sourceMappingURL=/build/index.js.map
+//# sourceMappingURL=index.js.map

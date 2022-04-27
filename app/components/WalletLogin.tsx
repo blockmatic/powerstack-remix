@@ -7,41 +7,9 @@ import { ethereum, isPhantom, solana } from '~/library'
 import { Button } from '~/components/Button'
 import { AnchorIcon, MetamaskIcon, PhantonIcon, GitlabIcon, GhLoginIcon, BitbucketIcon } from '~/components/icons'
 import { Flex } from '~/components/Flex'
+import { Text } from '~/components/Text'
+import { Card } from '~/components/Card'
 
-// TODO: This should be a card
-const Card = styled(Flex, {
-  maxWidth: '350px',
-  my: '$x-large',
-  mx: 'auto',
-  borderRadius: '4px',
-  px: '$small',
-  py: '$large',
-  transition: 'all 160ms ease-in-out',
-  boxShadow: '0px 4px 8px 0px #00000014, 2px 2px 2px 0px #0000000a',
-  '> button, > hr': {
-    width: '100%',
-    mb: '$small'
-  },
-  '> hr': {
-    height: 1,
-    backgroundColor: '$neutral',
-    border: 'none',
-    mt: '$xx-small',
-    mb: '$regular',
-  },
-  '&:hover': {
-    boxShadow: '0px 8px 16px 0px #00000014, 4px 4px 4px 0px #0000000a',
-  },
-  '@tabletUp': {
-    px: '$large'
-  }
-})
-
-const TitleStyles = styled('h1', {
-  textAlign: 'center',
-  fontFamily: '$extra-bold',
-  mb: '$regular',
-})
 const message = 'Login to PowerStack Remix'
 
 type LoginOptions = {
@@ -109,13 +77,13 @@ export const WalletLogin = () => {
 
   return (
     <Card direction="column">
-      <TitleStyles css={{ fontSize: '$h-2' }}>Welcome {user ? 'Back' : null} to PoweStack Remix</TitleStyles>
+      <Text as="h1" mb css={{ mb: '$regular' }}>Welcome {user ? 'Back' : null} to PoweStack Remix</Text>
       {/* <TitleStyles as="h2" css={{ fontSize: '$h-4' }}>Rinkeby</TitleStyles> */}
-      <Button onClick={loginWithPhantom} variant="phantom">
+      <Button css={{ mb: '$small' }} onClick={loginWithPhantom} variant="phantom">
         <PhantonIcon />
         Login with Phantom
       </Button>
-      <Button onClick={loginWithMetamask} variant="metamask">
+      <Button css={{ mb: '$small' }} onClick={loginWithMetamask} variant="metamask">
         <MetamaskIcon />
         Login with Metamask
       </Button>
@@ -131,26 +99,24 @@ export const WalletLogin = () => {
           ? user.address
           : 'wallet not connected'}
       </p> */}
-      <Button onClick={() => console.log('I\'m dummy, gimme power!')} variant="anchor">
+      <Button css={{ mb: '$small' }} onClick={() => console.log('I\'m dummy, gimme power!')} variant="anchor">
         <AnchorIcon />
         Login with Anchor
       </Button>
 
       <hr />
 
-      <Button onClick={() => console.log('I\'m dummy, gimme power!')} variant="oAuth">
-        <GhLoginIcon />
-        Login with Github
-      </Button>
-      <Button onClick={() => console.log('I\'m dummy, gimme power!')} variant="oAuth">
-        <GitlabIcon />
-        Login with Gitlab
-      </Button>
-      <Button onClick={() => console.log('I\'m dummy, gimme power!')} variant="oAuth">
-        <BitbucketIcon />
-        Login with BitBucket
-      </Button>
-
+      <Flex justify="between">
+        <Button css={{ 'svg': { mr: 0 } }} onClick={() => console.log('I\'m dummy, gimme power!')} variant="oAuth" aria-label="Login with Github">
+          <GhLoginIcon />
+        </Button>
+        <Button css={{ 'svg': { mr: 0 } }} onClick={() => console.log('I\'m dummy, gimme power!')} variant="oAuth" aria-label="Login with Gitlab">
+          <GitlabIcon />
+        </Button>
+        <Button css={{ 'svg': { mr: 0 } }} onClick={() => console.log('I\'m dummy, gimme power!')} variant="oAuth" aria-label="Login with BitBucket">
+          <BitbucketIcon />
+        </Button>
+      </Flex>
     </Card>
   )
 }
