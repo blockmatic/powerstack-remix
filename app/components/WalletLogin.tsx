@@ -77,7 +77,7 @@ export const WalletLogin = () => {
 
   return (
     <Card direction="column">
-      <Text as="h1" mb css={{ mb: '$regular' }}>Welcome {user ? 'Back' : null} to PoweStack Remix</Text>
+      <Text as="h1" css={{ mb: '$regular' }} variant="h1">Welcome {user ? 'Back' : null} to PowerStack Remix</Text>
       {/* <TitleStyles as="h2" css={{ fontSize: '$h-4' }}>Rinkeby</TitleStyles> */}
       <Button css={{ mb: '$small' }} onClick={loginWithPhantom} variant="phantom">
         <PhantonIcon />

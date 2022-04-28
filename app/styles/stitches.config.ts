@@ -17,6 +17,8 @@ const getFontSizes = () => {
 
 export const { styled, globalCss, getCssText, config }  = createStitches({
   theme: {
+    // TODO: to incorporate whole theme
+    // ...lightTheme,
     // colors,
     colors: {
       ...lightTheme.colors,
