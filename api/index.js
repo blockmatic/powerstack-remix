@@ -239,7 +239,7 @@ function handleRequest(request, responseStatusCode, responseHeaders, remixContex
   });
 }
 
-// route:/home/andler/Development/git_local/remix/powerstack-remix/app/root.tsx
+// route:D:\Users\Andler\Development\git_local\remix\powerstack-remix\app\root.tsx
 var root_exports = {};
 __export(root_exports, {
   CatchBoundary: () => CatchBoundary,
@@ -349,7 +349,6 @@ var solana = isBrowser && import_lodash.default.get(window, "solana");
 var import_client = require("@prisma/client");
 var prisma;
 if (false) {
-  prisma = new import_client.PrismaClient();
 } else {
   if (!global.prisma) {
     global.prisma = new import_client.PrismaClient();
@@ -416,7 +415,7 @@ var ClientStyleContext = (0, import_react3.createContext)({
 });
 var client_context_default = ClientStyleContext;
 
-// route:/home/andler/Development/git_local/remix/powerstack-remix/app/root.tsx
+// route:D:\Users\Andler\Development\git_local\remix\powerstack-remix\app\root.tsx
 var Container = styled("div", {
   backgroundColor: "#ff0000",
   padding: "1em"
@@ -470,7 +469,7 @@ function ErrorBoundary({ error }) {
   }, /* @__PURE__ */ React.createElement(Container, null, /* @__PURE__ */ React.createElement("p", null, "[ErrorBoundary]: There was an error: ", error.message)));
 }
 
-// route:/home/andler/Development/git_local/remix/powerstack-remix/app/routes/actions/login/$strategy.tsx
+// route:D:\Users\Andler\Development\git_local\remix\powerstack-remix\app\routes\actions\login\$strategy.tsx
 var strategy_exports = {};
 __export(strategy_exports, {
   action: () => action
@@ -1372,4 +1371,4 @@ module.exports = __toCommonJS(stdin_exports);
   entry,
   routes
 });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=/build/index.js.map

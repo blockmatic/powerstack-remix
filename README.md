@@ -22,6 +22,35 @@ PowerStack Remix template for development speed and great developer experience.
 - react-icons https://react-icons.github.io/react-icons/
 - ~/library with utilities
 
+### Remix Fundamentals
+
+- https://remix.run/docs/en/v1/api/conventions
+- https://www.youtube.com/watch?v=d_BhzHVV4aQ
+- https://www.youtube.com/watch?v=QpP3daA2na4
+- https://remix.run/docs/en/v1/pages/technical-explanation
+
+### Auth Strategy
+
+- https://github.com/sergiodxa/remix-auth/
+- https://www.youtube.com/watch?v=5O_uufXA8xE
+
+### Prisma ORM
+
+- https://www.youtube.com/watch?v=mU8-nKwfw4Y
+- https://www.prisma.io/docs/concepts/overview/what-is-prisma
+
+### GraphQL ( Real-time ) API
+
+- endpoint: https://powerstack.hasura.app/v1/graphql
+- simple graphiql: https://graphiql-online.com/
+- https://hasura.io/docs/latest/graphql/core/databases/postgres/queries/index/
+- https://hasura.io/docs/latest/graphql/core/databases/postgres/queries/query-filters/
+- https://hasura.io/blog/postgres-json-and-jsonb-type-support-on-graphql-41f586e47536/
+
+### Conventions
+
+- https://github.com/blockmatic/powerstack-architecture
+
 ### File Structure
 
 ```
@@ -81,16 +110,16 @@ You can start editing the page by modifying `app/routes/index.tsx`. The page aut
 
 ```
 # Build the image
-docker build -t image_name .
+docker build -t powerstack_remix .
 
 # Start a container
-docker run -p 3000:3000 -d image_name
+docker run --env-file -p 3000:3000 -d powerstack_remix
 
 # Get container ID
 docker ps
 
 # Print app output
-docker logs <container id>
+docker logs -f <container id>
 ```
 
 ## Contributing
