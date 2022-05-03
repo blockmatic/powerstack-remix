@@ -6,7 +6,7 @@ import { dark_theme } from './dark-theme'
 console.log('Light Theme for Stitches\n', light_theme)
 console.log('Dark Theme for Stitches\n', dark_theme)
 
-// NOTE: Light theme is default theme is Dark is available.
+// NOTE: Light theme is default theme if Dark is available.
 const getFontSizes = () => {
   let fontSizes:any = {}
   for (const property in light_theme.typeStyles) {
@@ -16,13 +16,12 @@ const getFontSizes = () => {
   return fontSizes
 }
 
-export const { styled, globalCss, getCssText, config }  = createStitches({
+export const { styled, globalCss, getCssText, config } = createStitches({
+  // TODO: To redefine typeStyles... not supported
+  // @ts-ignore
   theme: {
-    // colors,
-    colors: {
-      ...light_theme.colors,
-      'header-bg': 'hsla(0,0%,100%,.8)'
-    },
+    // NOTE: Light theme is default theme if Dark is available
+    ...light_theme.theme,
     sizes: {
       container: '78.5rem',
       iconSmall: '1.375rem',
