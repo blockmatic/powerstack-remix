@@ -1,6 +1,32 @@
 const fs = require('fs')
+const path = require('path')
 const [file_name] = process.argv.slice(2)
-const theme = require(`./${file_name ?? 'default'}-theme.json`)
+
+const themes = {}
+
+// NOTE: Mck data simulating an array of themes to read (array TBD)
+// NOTE: Where we fetch our data for our themes
+const dir = path.join(__dirname, '..', 'mock')
+
+// NOTE: Reading how many themes do we have
+fs.readdirSync(dir).forEach(json => {
+  console.log('json', json)
+  const theme_key = json
+    .replace(/(-theme\.json|\.json)/, '')
+    .replace(/theme/, 'default')
+  
+  themes[theme_key] = require(path.join(dir, json));
+})
+
+let theme = null
+
+try {
+  theme = require(`../mock/${file_name ?? 'default'}-theme.json`)
+} catch (error) {
+  console.log('❌ Couldn\'t get themes.\n.\n.\n👀 new default themes...')
+
+  theme = require(`../mock/theme.json`)
+}
 
 const new_theme = {
   name: theme.name,
@@ -10,6 +36,7 @@ const new_theme = {
 }
 
 console.log(`〰️ Processing Toolabs JSON Theme...`)
+
 
 Object.keys(theme).forEach((t_key) => {
   new_theme[t_key] = {}
@@ -84,8 +111,8 @@ console.log(`✔️  Toolabs JSON Theme Digested successfully`)
 console.log(`〰️ Writting Toolabs JSON Theme for stitches...`)
 
 fs.writeFile(
-  `./app/styles/${file_name}-theme.json`,
-  JSON.stringify(new_theme),
+  `./app/styles/${file_name ? `${file_name}-` : ''}theme.ts`,
+  `export const ${file_name ? `${file_name}_` : ''}theme = ${JSON.stringify(new_theme, null, 2)}`,
   (err) => {
     if (err) {
       console.error(err)
@@ -99,3 +126,5 @@ fs.writeFile(
     )
   },
 )
+
+// TODO: fs.writeFile(`./app/types/${file_name ? `${file_name}_` : ''}-theme.ts`)...

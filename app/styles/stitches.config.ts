@@ -1,15 +1,16 @@
 import type * as Stitches from '@stitches/react';
 import { createStitches } from '@stitches/react'
-import lightTheme from './light-theme.json'
-import darkTheme from './dark-theme.json'
+import { light_theme } from './light-theme'
+import { dark_theme } from './dark-theme'
 
-console.log('Light Theme for Stitches\n', lightTheme)
-console.log('Dark Theme for Stitches\n', darkTheme)
+console.log('Light Theme for Stitches\n', light_theme)
+console.log('Dark Theme for Stitches\n', dark_theme)
 
+// NOTE: Light theme is default theme is Dark is available.
 const getFontSizes = () => {
   let fontSizes:any = {}
-  for (const property in lightTheme.typeStyles) {
-    const tempFontSize:string = lightTheme.typeStyles[property as keyof object]['fontSize']
+  for (const property in light_theme.typeStyles) {
+    const tempFontSize:string = light_theme.typeStyles[property as keyof object]['fontSize']
     fontSizes[property as keyof object] = tempFontSize
   }
   return fontSizes
@@ -19,7 +20,7 @@ export const { styled, globalCss, getCssText, config }  = createStitches({
   theme: {
     // colors,
     colors: {
-      ...lightTheme.colors,
+      ...light_theme.colors,
       'header-bg': 'hsla(0,0%,100%,.8)'
     },
     sizes: {
@@ -32,8 +33,8 @@ export const { styled, globalCss, getCssText, config }  = createStitches({
       heading: 700,
       bold: 700,
     },
-    space: lightTheme.space,
-    fonts: lightTheme.fonts,
+    space: light_theme.space,
+    fonts: light_theme.fonts,
     fontSizes: getFontSizes()
   },
   media: {
