@@ -9,8 +9,8 @@ console.log('Dark Theme for Stitches\n', dark_theme)
 // NOTE: Light theme is default theme if Dark is available.
 const getFontSizes = () => {
   let fontSizes:any = {}
-  for (const property in light_theme.typeStyles) {
-    const tempFontSize:string = light_theme.typeStyles[property as keyof object]['fontSize']
+  for (const property in light_theme.theme.typeStyles) {
+    const tempFontSize:string = light_theme.theme.typeStyles[property as keyof object]['fontSize']
     fontSizes[property as keyof object] = tempFontSize
   }
   return fontSizes
