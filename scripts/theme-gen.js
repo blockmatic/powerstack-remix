@@ -130,7 +130,7 @@ writing_theme_spinner.start()
 
 file_names.forEach(file => {
   fs.writeFile(
-    `./app/styles/${file !== 'default' ? `${file}-` : ''}theme.ts`,
+    `./app/styles/themes/${file !== 'default' ? `${file}-` : ''}theme.ts`,
     `export const ${file !== 'default' ? `${file}_` : ''}theme = ${JSON.stringify(new_themes.find(t => t.name === file), null, 2)}`,
     (err) => {
       if (err) {

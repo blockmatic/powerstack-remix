@@ -1,7 +1,7 @@
 import type * as Stitches from '@stitches/react';
 import { createStitches } from '@stitches/react'
-import { light_theme } from './light-theme'
-import { dark_theme } from './dark-theme'
+import { light_theme } from './themes/light-theme'
+import { dark_theme } from './themes/dark-theme'
 
 console.log('Light Theme for Stitches\n', light_theme)
 console.log('Dark Theme for Stitches\n', dark_theme)
