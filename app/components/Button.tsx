@@ -1,6 +1,5 @@
 import { styled } from '~/styles/stitches.config'
 
-
 export const Button = styled('button', {
   // Reset
   all: 'unset',
@@ -11,6 +10,7 @@ export const Button = styled('button', {
   boxSizing: 'border-box',
   userSelect: 'none',
   boxShadow: '0px 4px 8px 0px #00000014, 2px 2px 2px 0px #0000000a',
+  borderRadius: '18px',
   '&::before': {
     boxSizing: 'border-box',
   },
@@ -24,7 +24,7 @@ export const Button = styled('button', {
   fontVariantNumeric: 'tabular-nums',
   border: '1px solid none',
   textAlign: 'center',
-  lineHeight: '1.2',
+  lineHeight: 1,
   // TODO: transitions not working?
   transition: 'all 240ms ease-in-out',
 
@@ -38,29 +38,25 @@ export const Button = styled('button', {
 
   '&:disabled': {
     color: '$neutral-700',
-    backgroundColor: '$neutral-300', 
+    backgroundColor: '$neutral-300',
     cursor: 'not-allowed',
   },
   '&:hover:not(:disabled)': {
     boxShadow: '0px 8px 16px 0px #00000014, 4px 4px 4px 0px #0000000a',
   },
-
   variants: {
     size: {
       'small': {
-        borderRadius: '4px',
         height: '40px',
         p: '$xx-small',
       },
       'medium': {
         // NOTE: it is getting the key name but doesn't exist on :root
-        borderRadius: '4px',
         height: '50px',
         p: '$x-small',
         fontSize: '$body',
       },
       'large': {
-        borderRadius: '4px',
         height: '50px',
         p: '$x-small',
         fontSize: '$body',
@@ -73,33 +69,38 @@ export const Button = styled('button', {
           backgroundColor: '$neutral-700'
         }
       },
-      metamask: {
-        backgroundColor: '$primary-600',
-        color: '#FFF',
-        '&:hover:not(:disabled)': {
-          backgroundColor: '$primary-700'
-        }
-      },
-      anchor: {
-        backgroundColor: '$primary-700',
-        color: '#FFF',
-        '&:hover:not(:disabled)': {
-          backgroundColor: '$primary-800'
-        }
-      },
-      phantom: {
+      primary: {
         backgroundColor: '$primary',
         color: '#FFF',
         '&:hover:not(:disabled)': {
           backgroundColor: '$primary-600'
         }
       },
-      oAuth: {
-        backgroundColor: '$neutral-700',
+      panthom: {
+        backgroundColor: '#4C44C6',
         color: '#FFF',
-        'path': { fill: '#FFF' },
         '&:hover:not(:disabled)': {
-          backgroundColor: '$neutral-800'
+          backgroundColor: '$primary-700',
+        }
+      },
+      metamask: {
+        backgroundColor: '$neutral-300',
+        color: '#000',
+        '&:hover:not(:disabled)': {
+          backgroundColor: '$neutral-400'
+        }
+      },
+      anchor: {
+        backgroundColor: '#3650A2',
+        color: '#FFF',
+        '&:hover:not(:disabled)': {
+          backgroundColor: '$primary-700'
+        }
+      },
+      oAuth: {
+        backgroundColor: '$neutral-300',
+        '&:hover:not(:disabled)': {
+          backgroundColor: '$neutral-400'
         }
       },
       transparent: {

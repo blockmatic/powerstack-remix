@@ -4,8 +4,8 @@ import _ from 'lodash'
 import { ethers } from 'ethers'
 import { useFetcher, useLocation } from '@remix-run/react'
 import { ethereum, isPhantom, solana } from '~/library'
-import { Button } from '~/components/Button'
 import { AnchorIcon, MetamaskIcon, PhantonIcon, GitlabIcon, GhLoginIcon, BitbucketIcon } from '~/components/icons'
+import { Button } from '~/components/Button'
 import { Flex } from '~/components/Flex'
 import { Text } from '~/components/Text'
 import { Card } from '~/components/Card'
@@ -75,18 +75,63 @@ export const WalletLogin = () => {
     })
   }
 
+  const Title = styled(Text, {
+    fontSize: '$h-2',
+    fontWeight: '$semi-bold',
+    mb: '$large',
+    mt: 0,
+    px: '$small',
+    textAlign: 'center',
+    '@tabletUp': {
+      fontSize: '$h-1',
+      mb: '$x-large',
+    },
+  })
+
+  const LoginButton = styled(Button, {
+    '& svg': {
+      flexShrink: 0,
+      mr: '$regular'
+    }
+  })
+
+  const Separator = styled('div', {
+    display: 'grid',
+    gridTemplateColumns: '1fr max-content 1fr',
+    gridColumnGap: '$regular',
+    alignItems: 'center',
+    my: '$regular',
+    '&:before, &:after': {
+      content: '""',
+      display: 'block',
+      height: '1px',
+      backgroundColor: '#E5E7EB',
+    }
+  })
+
+  const IconsFlex = styled(Flex, {
+    px: '$small',
+    columnGap: '$small',
+    button: {
+      flex: '1'
+    }
+  })
+
   return (
-    <Card direction="column">
-      <Text as="h1" css={{ mb: '$regular' }} variant="h1">Welcome {user ? 'Back' : null} to PowerStack Remix</Text>
-      {/* <TitleStyles as="h2" css={{ fontSize: '$h-4' }}>Rinkeby</TitleStyles> */}
-      <Button css={{ mb: '$small' }} onClick={loginWithPhantom} variant="phantom">
+    <Card direction="column" variant="login">
+      <Title as="h1" variant="h1">Welcome {user ? 'Back' : null} to PowerStack Remix</Title>
+      <LoginButton onClick={loginWithPhantom} variant="panthom">
         <PhantonIcon />
         Login with Phantom
-      </Button>
-      <Button css={{ mb: '$small' }} onClick={loginWithMetamask} variant="metamask">
+      </LoginButton>
+      <LoginButton css={{ mb: '$small' }} onClick={() => console.log('I\'m dummy, gimme power!')} variant="anchor">
+        <AnchorIcon />
+        Login with Anchor
+      </LoginButton>
+      <LoginButton css={{ mb: '$small' }} onClick={loginWithMetamask} variant="metamask">
         <MetamaskIcon />
         Login with Metamask
-      </Button>
+      </LoginButton>
       {/* <p>
         Address:{' '}
         {user?.address && user?.network === 'rinkeby'
@@ -99,14 +144,8 @@ export const WalletLogin = () => {
           ? user.address
           : 'wallet not connected'}
       </p> */}
-      <Button css={{ mb: '$small' }} onClick={() => console.log('I\'m dummy, gimme power!')} variant="anchor">
-        <AnchorIcon />
-        Login with Anchor
-      </Button>
-
-      <hr />
-
-      <Flex justify="between">
+      <Separator>Or sign in with</Separator>
+      <IconsFlex justify="center">
         <Button css={{ 'svg': { mr: 0 } }} onClick={() => console.log('I\'m dummy, gimme power!')} variant="oAuth" aria-label="Login with Github">
           <GhLoginIcon />
         </Button>
@@ -116,7 +155,7 @@ export const WalletLogin = () => {
         <Button css={{ 'svg': { mr: 0 } }} onClick={() => console.log('I\'m dummy, gimme power!')} variant="oAuth" aria-label="Login with BitBucket">
           <BitbucketIcon />
         </Button>
-      </Flex>
+      </IconsFlex>
     </Card>
   )
 }

@@ -32,14 +32,13 @@ export const { styled, globalCss, getCssText, config } = createStitches({
       heading: 700,
       bold: 700,
     },
-    space: light_theme.space,
-    fonts: light_theme.fonts,
     fontSizes: getFontSizes()
   },
   media: {
-    tabletUp: '(min-width: 768px)',
-    desktopUp: '(min-width: 1024px)',
-    largeDesktopUp: '(min-width: 1680px)',
+    'x-small': '(min-width: 425px)',
+    'small': '(min-width: 768px)',
+    'medium': '(min-width: 1024px)',
+    'large': '(min-width: 1440px)',
   },
   utils: {
     p: (value: Stitches.PropertyValue<'padding'>) => ({

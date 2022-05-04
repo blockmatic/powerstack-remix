@@ -2,16 +2,13 @@ import { Flex } from "~/components/Flex";
 import { styled } from "~/styles/stitches.config";
 
 export const Card = styled(Flex, {
-  maxWidth: '574px',
   mx: 'auto',
-  // NOTE: Radius does not work
-  borderRadius: '40px',
+  borderRadius: '$radius-40',
   px: '$small',
-  py: '$large',
+  py: '$regular',
   transition: 'all 160ms ease-in-out',
   position: 'relative',
   background: '#fff8',
-  backdropFilter: 'saturate(180%) blur(10px)',
   '> button, > hr': {
     width: '100%',
     mb: '$small'
@@ -31,14 +28,14 @@ export const Card = styled(Flex, {
     }
   },
 
-  '@tabletUp': {
+  '@small': {
     px: '$x-large'
   },
 
   variants: {
     variant: {
       glass: {
-        backgroundImage: 'url(\'/assets/images/glass-bg\')',
+        backgroundImage: 'url(assets/images/glass-bg.png)',
         '&::before': {
           transition: 'all 160ms ease-in-out',
           backgroundColor: '#0000000a',
@@ -50,6 +47,15 @@ export const Card = styled(Flex, {
           right: 0,
           boxShadow: '0px 8px 16px 0px #00000014, 4px 4px 4px 0px #0000000a',
           filter: 'blur(10px)',
+        },
+      },
+      login: {
+        boxShadow: '0px 40px 50px rgba(214, 224, 244, 0.15)',
+        maxWidth: '544px',
+        py: '$large',
+        '@small': {
+          py: '$x-large',
+          px: '$x-large',
         },
       }
     }
